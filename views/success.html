@@ -27,7 +27,7 @@
 
     <main>
       <h2>Request has been received.</h2>
-      <p class="bold">Thank you Stan Yang!</p>
+      <p class="bold">Thank you <span id="userNamePlaceholder"></span>!</p>
       <button onclick="location.href='/'">Go Back</button>
     </main>
 
@@ -45,3 +45,13 @@
     <script src="https://button.glitch.me/button.js"></script>
   </body>
 </html>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const userName = params.get("userName");
+
+  if (userName) {
+    const userNamePlaceholder = document.getElementById("userNamePlaceholder");
+    userNamePlaceholder.textContent = userName;
+  }
+</script>

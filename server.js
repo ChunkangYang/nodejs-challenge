@@ -22,6 +22,9 @@ app.get("/", (request, response) => {
 });
 
 app.post("/", (request, response) => {
+  // const userName = request.body.name;
+  
+  // response.sendFile(__dirname + "/views/success.html", { userName });
   response.sendFile(__dirname + "/views/fail.html");
 });
 

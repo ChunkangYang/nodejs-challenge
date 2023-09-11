@@ -22,7 +22,7 @@ app.get("/", (request, response) => {
 });
 
 app.post("/", (request, response) => {
-  response.sendFile(__dirname + "/views/success.html");
+  response.sendFile(__dirname + "/views/fail.html");
 });
 
 // listen for requests :)
